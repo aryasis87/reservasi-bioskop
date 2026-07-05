@@ -1,5 +1,5 @@
 export default function sitemap() {
   return [
-    { url: "https://reservasi-bioskop.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
+    { url: "https://bioskop.pintuweb.com", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
   ];
 }

@@ -3,10 +3,10 @@ import { Outfit } from 'next/font/google';
 
 const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit', display: 'swap' });
 
-const __jsonld = {"@context":"https://schema.org","@type":"MovieTheater","name":"Sinema Nusantara","description":"Pemesanan tiket bioskop online","url":"https://reservasi-bioskop.vercel.app","areaServed":"ID"};
+const __jsonld = {"@context":"https://schema.org","@type":"MovieTheater","name":"Sinema Nusantara","description":"Pemesanan tiket bioskop online","url":"https://bioskop.pintuweb.com","areaServed":"ID"};
 
 export const metadata = {
-  metadataBase: new URL("https://reservasi-bioskop.vercel.app"),
+  metadataBase: new URL("https://bioskop.pintuweb.com"),
   title: "Sinema Nusantara — Pesan Tiket Bioskop Online",
   description: "Pesan tiket bioskop online: pilih film, jam tayang, dan kursi lewat denah studio interaktif. Cepat dan tanpa antre.",
   applicationName: "Sinema Nusantara",
@@ -14,11 +14,11 @@ export const metadata = {
   authors: [{ name: "Sinema Nusantara" }],
   creator: "Sinema Nusantara",
   publisher: "Sinema Nusantara",
-  alternates: { canonical: "https://reservasi-bioskop.vercel.app" },
+  alternates: { canonical: "https://bioskop.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://reservasi-bioskop.vercel.app",
+    url: "https://bioskop.pintuweb.com",
     siteName: "Sinema Nusantara",
     title: "Sinema Nusantara — Pesan Tiket Bioskop Online",
     description: "Pesan tiket bioskop online: pilih film, jam tayang, dan kursi lewat denah studio interaktif. Cepat dan tanpa antre.",
