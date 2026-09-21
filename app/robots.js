@@ -1,7 +1,7 @@
 export default function robots() {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://bioskop.pintuweb.com/sitemap.xml",
-    host: "https://bioskop.pintuweb.com",
+    sitemap: "https://reservasi-bioskop.vercel.app/sitemap.xml",
+    host: "https://reservasi-bioskop.vercel.app",
   };
 }
