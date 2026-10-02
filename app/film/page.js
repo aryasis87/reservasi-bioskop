@@ -1,0 +1,31 @@
+import Link from 'next/link';
+import { films } from '@/lib/data';
+
+export const metadata = {
+  title: 'Film',
+  description: 'Film yang sedang tayang di Bioskop Kelir: sinopsis, durasi, klasifikasi usia, dan jam tayang.',
+  alternates: { canonical: '/film' },
+};
+
+export default function FilmIndex() {
+  return (
+    <main className="mx-auto max-w-3xl px-5 py-10">
+      <h1 className="text-3xl font-bold md:text-4xl">Sedang tayang</h1>
+      <p className="mt-2 text-white/75">Lima film bergantian di satu layar. Semua judul di sini fiktif.</p>
+      <ul className="mt-8 grid gap-5 sm:grid-cols-2">
+        {films.map((f) => (
+          <li key={f.id}>
+            <Link href={`/film/${f.id}`} className="group flex gap-4 rounded-2xl border border-white/10 bg-white/5 p-4 transition hover:border-amber-400/60">
+              <span className={`flex h-28 w-20 shrink-0 items-end rounded-lg bg-gradient-to-br p-2 text-[10px] font-bold ${f.color}`} aria-hidden="true"><span className="rounded bg-black/50 px-1.5 py-0.5">{f.klasifikasi}</span></span>
+              <span className="min-w-0">
+                <span className="block text-lg font-bold group-hover:text-amber-300">{f.title}</span>
+                <span className="block text-xs text-white/75">{f.genre} · {f.durasi} menit · {f.klasifikasi}</span>
+                <span className="mt-2 line-clamp-3 block text-sm text-white/85">{f.sinopsis}</span>
+              </span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </main>
+  );
+}

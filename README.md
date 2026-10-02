@@ -1,20 +1,23 @@
-# Sinema Nusantara — Pesan Tiket Bioskop Online
+# Bioskop Kelir — Pesan tiket dan pilih kursi
 
-Pesan tiket bioskop online: pilih film, jam tayang, dan kursi lewat denah studio interaktif. Cepat dan tanpa antre.
+Bioskop satu layar (fiktif) dengan 96 kursi. Paradigma **peta kursi**: pilih hari dan jam tayang dari program harian, lalu kursi di denah studio.
 
 **Demo live:** https://reservasi-bioskop.vercel.app
 
-![Tangkapan layar Sinema Nusantara](public/og.jpg)
+![Tangkapan layar](public/og.jpg)
 
-> Aplikasi reservasi contoh. Data tersimpan di browser (localStorage), tanpa backend.
+> Purwarupa desain. Nama usaha, data, dan harga fiktif. Tidak ada pembayaran dan tidak ada yang dikirim ke server: pemesanan disimpan di `localStorage` peramban. Tanggal dan jam dihitung dalam WIB di peramban; keterisian contoh dibuat stabil per tanggal.
 
-## Konsep
+## Fitur
 
-Paradigma **peta kursi**: pilih film dan jadwal, lalu kursi di baris A–H dengan lorong di tengah dan bilah checkout yang menempel.
+- Program harian tanpa jam tumpang-tindih (satu layar), pertunjukan pagi film keluarga di akhir pekan.
+- Harga Senin–Kamis dan Jumat–Minggu; maksimal 8 kursi per transaksi.
+- `/film` dan `/film/[id]` — sinopsis, durasi, klasifikasi usia LSF, jam tayang.
+- `/tiket` — tiket saya bergaya e-ticket dengan kode.
 
 ## Halaman
 
-`/`
+`/` · `/film` · `/film/[id]` · `/tiket`
 
 ## Teknologi
 
@@ -23,7 +26,7 @@ Paradigma **peta kursi**: pilih film dan jadwal, lalu kursi di baris A–H denga
 - JavaScript
 - Framer Motion, Lucide (ikon)
 - Font: Outfit (next/font)
-- SEO: metadata per halaman, Open Graph, JSON-LD, sitemap.xml, dan robots.txt
+- SEO: metadata per halaman, Open Graph, sitemap.xml, dan robots.txt
 
 ## Menjalankan secara lokal
 

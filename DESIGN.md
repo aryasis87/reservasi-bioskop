@@ -1,4 +1,4 @@
-# Sinema Nusantara — Design System (Reservasi Bioskop)
+# Bioskop Kelir — Design System (Reservasi Bioskop)
 
 > Concept: **cinema marquee / theater experience** — panggung gelap dramatis, marquee & poster menyala; terasa seperti melangkah ke dalam bioskop. Platform: responsive web. Bahasa: Indonesia.
 

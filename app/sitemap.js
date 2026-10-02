@@ -1,5 +1,8 @@
+import { films } from '@/lib/data';
+
+const URL = 'https://reservasi-bioskop.vercel.app';
+
 export default function sitemap() {
-  return [
-    { url: "https://reservasi-bioskop.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-  ];
+  const now = new Date();
+  return ['', '/film', ...films.map((f) => `/film/${f.id}`)].map((p) => ({ url: URL + p, lastModified: now, changeFrequency: 'weekly', priority: p ? 0.7 : 1 }));
 }
